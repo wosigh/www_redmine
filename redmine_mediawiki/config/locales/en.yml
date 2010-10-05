@@ -1,0 +1,4 @@
+# English strings go here for Rails i18n
+en:
+  field_external_wiki_link: "External Wiki Link"
+  field_redirect_wiki: "Enable Wiki Redirect"
