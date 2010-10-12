@@ -2,3 +2,4 @@
 en:
   field_external_wiki_link: "External Wiki Link"
   field_redirect_wiki: "Enable Wiki Redirect"
+  field_keep_internal: "Load external Wiki in Iframe"
