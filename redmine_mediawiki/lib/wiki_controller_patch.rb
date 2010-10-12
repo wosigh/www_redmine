@@ -6,12 +6,17 @@ module Wikimedia
       def index_with_wiki_bypass
 
       if @wiki.external_wiki_link && @wiki.redirect_wiki
-        redirect_to @wiki.external_wiki_link
+		if @wiki.keep_internal
+			render 'wiki/iframe'
+		else
+			redirect_to @wiki.external_wiki_link
+		end
+        
       else
         #redirect_to "http://yahoo.com"
         index_without_wiki_bypass
       end
-      end
+   end
       
 
       def self.included(base)
@@ -19,9 +24,7 @@ module Wikimedia
           unloadable
         end
         base.send(:alias_method_chain, :index, :wiki_bypass)
-        #base.send(:alias_method_chain, :edit, :scm_settings)
       end
-
     end
   end
 end
