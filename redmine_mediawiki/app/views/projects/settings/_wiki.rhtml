@@ -16,6 +16,8 @@
 </p>
 <p><%= f.check_box :keep_internal  %> </br>
 </p>
+<p><%= f.text_field :iframe_width, :size => 6, :required => false %><br /></p>
+<p><%= f.text_field :iframe_height, :size => 6, :required => false %><br /></p>
 </div>
 <div class="contextual">
 <%= link_to(l(:button_delete), {:controller => 'wikis', :action => 'destroy', :id => @project},
